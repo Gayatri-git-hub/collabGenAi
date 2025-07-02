@@ -29,7 +29,15 @@ jobs:
     - name: Convert notebooks to .py
       run: |
         for nb in $(find . -name "*.ipynb"); do
+          echo "Converting $nb"
           jupyter nbconvert --to script "$nb"
+          # Get base name without extension
+          base=$(basename "$nb" .ipynb)
+          # Check if output .py exists, then move or rename it
+          if [ -f "${base}.py" ]; then
+            echo "OutputFile file already exists. Renaming ${base}.py to custom_${base}.py"
+            mv "${base}.py" "custom_${base}.py"
+          fi
         done
 
     - name: Push converted files back
