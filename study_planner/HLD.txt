@@ -1,0 +1,22 @@
+         User (Syllabus Image)
+                 ↓
+        ┌──────────────────────┐
+        │    OCR Agent (EasyOCR)│
+        └──────────────────────┘
+                 ↓
+     ┌────────────────────────────┐
+     │ Curriculum Agent (LLM +    │
+     │  Search or Static DB)      │
+     └────────────────────────────┘
+                 ↓
+     ┌────────────────────────────┐
+     │ Study Planner Agent (LLM)  │
+     └────────────────────────────┘
+                 ↓
+     ┌────────────────────────────┐
+     │ Question Generator (LLM)   │
+     └────────────────────────────┘
+                 ↓
+           Outputs:
+      - Weekly study plan (.pdf/.txt)
+      - Printable question paper
