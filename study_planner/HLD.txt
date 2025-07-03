@@ -20,3 +20,14 @@
            Outputs:
       - Weekly study plan (.pdf/.txt)
       - Printable question paper
+
+Features
+OCR Uploads: Take image of syllabus, extract text.
+
+Topic Mapping: Match topics to ICSE online book resources (or fallback to NCERT/CBSE if not found).
+
+Planner: Spread chapters across weeks for 1-hour sessions.
+
+Question Papers: Auto-generate tests after each topic/week.
+
+Colab UI: User uploads image, gets plan + test paper.
