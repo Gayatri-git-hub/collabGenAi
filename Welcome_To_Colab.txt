@@ -28,3 +28,21 @@ plt.close(fig)
 #test
 
 print('Hi.. this is my first collab file.. tesing workflow for github action! updated with .py file!')
+
+print('Hi.. this is my first collab file.. tesing workflow for github action! updated with .py file!')
+
+!pip install google-genai
+
+
+
+from google import genai
+from google.genai import types
+from google.colab import userdata
+
+client = genai.Client(api_key=userdata.get('GEMINI_API_KEY'), http_options=types.HttpOptions(api_version='v1alpha'))
+print(client)
+
+response = client.models.generate_content(model='gemini-2.0-flash-001', contents='why is the sky blue')
+
+# Print only the text content of the response
+print(response.text)
