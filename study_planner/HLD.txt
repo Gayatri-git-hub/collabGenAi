@@ -31,3 +31,13 @@ Planner: Spread chapters across weeks for 1-hour sessions.
 Question Papers: Auto-generate tests after each topic/week.
 
 Colab UI: User uploads image, gets plan + test paper.
+
+
+Free AI Models & Tools
+Task	                           Tool/Model
+-----------------------------------------------------------------
+OCR from image	                  pytesseract or EasyOCR
+Text extraction pipeline	         LangChain, Transformers, spaCy
+Retrieval (ICSE book content)	SerpAPI, DuckDuckGo search, or Hugging Face rag pipeline
+LLM for QA & planning	         Hugging Face models like Mistral, LLaMA-3, Phi-3, or Google's Gemini 1.5 (via Colab if needed)
+Colab Interface	                  Gradio for interactive uploads and outputs
