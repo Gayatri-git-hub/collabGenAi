@@ -1,0 +1,22 @@
+!pip install -q google-generativeai
+
+import google.generativeai as genai
+from google.colab import userdata
+
+api_key = userdata.get('GEMINI_API_KEY')
+
+genai.configure(api_key=api_key)
+
+def explain_code_with_gemini(sql_query):
+  prompt = f"""
+    You are a code assistant that explains given SQL in simple English.
+    Explain the following SQL Query:
+
+    {sql_query}
+    """
+  model = genai.GenerativeModel('models/gemini-1.5-flash')
+  response = model.generate_content(prompt)
+  return response.text
+
+sql_input = input("Enter a SQL Query: ")
+print(explain_code_with_gemini(sql_input))
